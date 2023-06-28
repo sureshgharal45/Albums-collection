@@ -7,18 +7,13 @@
 2. package.json
 3. package-lock.json
 4. README.md
-  # public
-     1. favicon.io
-     2. index.html
-     3. manifest.json
+ 
+# public
+1. favicon.io
+2. index.html
+3. manifest.json
+
 # src
-  # components
-     1. App.js
-     2. AddAlbum.js
-     3. AlbumList.js
-     4. List.js
-     5. Navbar.js
-     6. UpdateAlbum.js
 1. index.css
 2. App.css
 3. App.test.js
@@ -26,6 +21,13 @@
 5. reportWebVitals.js
 6. setupTests.js
 
+# components
+1. App.js
+2. AddAlbum.js
+3. AlbumList.js
+4. List.js
+5. Navbar.js
+6. UpdateAlbum.js
 
 # About project
 This project in which users can add the album to the album list of any kind of reference that they have

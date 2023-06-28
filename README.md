@@ -62,7 +62,7 @@ React
 # Usage
 To run this project in your device, download the repository and open terminal in your editor and run command…
 npm start
-Or you can directly visit
+Or you can directly visit https://albums-collection-app.netlify.app/
 
 
 # Project Status

@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import AddAlbum from "./AddAlbum";
 import AlbumsList from "./AlbumList";
 import UpdateAlbum from "./UpdateAlbum";
+import { BrowserRouter } from "react-router-dom";
+import Navbar from "./Navbar";
 
 export default class App extends Component {
   constructor() {
@@ -104,6 +106,7 @@ export default class App extends Component {
       .then((json) => json);
     const length = this.state.albums.length;
     const lastId = this.state.albums[length - 1].id;
+    // console.log(lastId);
     const album = {
       userId: userId,
       id: lastId + 1,
@@ -114,36 +117,38 @@ export default class App extends Component {
     });
     alert("New Album added successfully in the bottom");
   };
-  //--------------------------------------------------------------------------------------------------------
 
   render() {
     return (
       <>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <AlbumsList
-                albums={this.state.albums}
-                setUpdateAlbum={this.setUpdateAlbum}
-                deleteAlbumFromList={this.deleteAlbumFromList}
-              />
-            }
-          ></Route>
-          <Route
-            path="/add-album"
-            element={<AddAlbum addAlbumToList={this.addAlbumToList} />}
-          ></Route>
-          <Route
-            path="/update-album"
-            element={
-              <UpdateAlbum
-                album={this.state.updateAlbum}
-                updateAlbumInList={this.updateAlbumInList}
-              />
-            }
-          ></Route>
-        </Routes>
+        <BrowserRouter basename="/Albums-collection">
+          <Navbar />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <AlbumsList
+                  albums={this.state.albums}
+                  setUpdateAlbum={this.setUpdateAlbum}
+                  deleteAlbumFromList={this.deleteAlbumFromList}
+                />
+              }
+            ></Route>
+            <Route
+              path="/add-album"
+              element={<AddAlbum addAlbumToList={this.addAlbumToList} />}
+            ></Route>
+            <Route
+              path="/update-album"
+              element={
+                <UpdateAlbum
+                  album={this.state.updateAlbum}
+                  updateAlbumInList={this.updateAlbumInList}
+                />
+              }
+            ></Route>
+          </Routes>
+        </BrowserRouter>
       </>
     );
   }

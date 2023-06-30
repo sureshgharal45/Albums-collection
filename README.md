@@ -59,7 +59,7 @@ Followig are the requirements to run this project:
 Node Package Manager (NPM)
 React
 
-# Usage
+# Usage (How to start the project)
 To run this project in your device, download the repository and open terminal in your editor and run command…
 npm start
 Or you can directly visit https://sureshgharal45.github.io/Albums-collection/
